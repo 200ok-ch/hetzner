@@ -1,0 +1,8 @@
+{:paths ["."]
+ :deps {io.github.200ok-ch/shell-smith
+        {:git/url "https://github.com/200ok-ch/shell-smith"}}
+ :aliases
+ {:dev
+  {:override-deps
+   {io.github.200ok-ch/shell-smith
+    {:local/root "../shell-smith"}}}}}

@@ -1,0 +1,3 @@
+{:bbin/bin {hetzner {:main-opts ["-m" "hetzner"]}}
+ :deps {io.github.200ok-ch/shell-smith
+        {:local/root "../shell-smith"}}}
