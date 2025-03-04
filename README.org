@@ -1,0 +1,69 @@
+* Hetzner DNS CLI Tool
+
+A command-line utility for managing DNS records through the Hetzner DNS API.
+
+** Installation
+
+Install using bbin:
+
+#+begin_src bash
+bbin install io.github.200ok-ch/hetzner
+#+end_src
+
+** Features
+
+* Pull DNS records from Hetzner
+* Validate DNS configurations
+* Push DNS record changes to Hetzner
+* Support for selective zone operations
+
+** Usage
+
+#+begin_src bash
+# Pull DNS records
+hetzner pull
+
+# Validate configurations
+hetzner validate
+
+# Push changes
+hetzner push
+
+# Work with specific zones
+hetzner pull --zones=example.com,example.org
+#+end_src
+
+*** Authentication
+
+The Hetzner DNS API token can be provided in two ways:
+
+1. Environment variable: =HETZNER_TOKEN=
+2. Config file: =hetzner.yml= with the key =token=
+
+*** Commands
+
+* =pull=: Download DNS records from Hetzner
+* =validate=: Verify DNS configurations
+* =push=: Upload DNS record changes to Hetzner
+* =-h= or =--help=: Display help information
+* =-v= or =--version=: Show version number
+
+*** Options
+
+* =-t --token=: Your Hetzner DNS API token (optional, see Authentication)
+* =-z --zones=: Comma-separated list of zone names to operate on (optional)
+* =-e --endpoint=: API endpoint URL [default: https://dns.hetzner.com/api]
+
+** Requirements
+
+* Babashka
+* bbin
+* Hetzner DNS API token
+
+** License
+
+tbd.
+
+** References
+
+- [[https://dns.hetzner.com/api-docs][Hetzner DNS API]]
