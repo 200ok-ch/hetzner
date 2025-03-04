@@ -12,10 +12,10 @@ bbin install io.github.200ok-ch/hetzner
 
 ** Features
 
-* Pull DNS records from Hetzner
-* Validate DNS configurations
-* Push DNS record changes to Hetzner
-* Support for selective zone operations
+- Pull DNS records from Hetzner
+- Validate DNS configurations
+- Push DNS record changes to Hetzner
+- Support for selective zone operations
 
 ** Usage
 
@@ -35,24 +35,25 @@ hetzner pull --zones=example.com,example.org
 
 *** Authentication
 
-The Hetzner DNS API token can be provided in two ways:
+The Hetzner DNS API token can be provided in three ways:
 
-1. Environment variable: =HETZNER_TOKEN=
-2. Config file: =hetzner.yml= with the key =token=
+1. Config file: =hetzner.yml= with the key =token=
+2. Environment variable: =HETZNER_TOKEN=
+3. Command line flag: =-t= or =--token=
 
 *** Commands
 
-* =pull=: Download DNS records from Hetzner
-* =validate=: Verify DNS configurations
-* =push=: Upload DNS record changes to Hetzner
-* =-h= or =--help=: Display help information
-* =-v= or =--version=: Show version number
+- =pull=: Download DNS records from Hetzner
+- =validate=: Verify DNS configurations
+- =push=: Upload DNS record changes to Hetzner
+- =-h= or =--help=: Display help information
+- =-v= or =--version=: Show version number
 
 *** Options
 
-* =-t --token=: Your Hetzner DNS API token (optional, see Authentication)
-* =-z --zones=: Comma-separated list of zone names to operate on (optional)
-* =-e --endpoint=: API endpoint URL [default: https://dns.hetzner.com/api]
+- =-t --token=: Your Hetzner DNS API token (optional, see Authentication)
+- =-z --zones=: Comma-separated list of zone names to operate on (optional)
+- =-e --endpoint=: API endpoint URL [default: https://dns.hetzner.com/api]
 
 ** Requirements
 
