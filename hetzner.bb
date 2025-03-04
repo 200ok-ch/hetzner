@@ -41,7 +41,7 @@ Options:
                   (json/parse-string true)
                   :zones)]
     (if zone-names
-      (let [zone-set (set (str/split zone-name #"\s*,\s*"))]
+      (let [zone-set (set (str/split zone-names #"\s*,\s*"))]
         (filter #(zone-set (:name %)) zones))
       zones)))
 
@@ -69,7 +69,7 @@ Options:
     (let [auth-header (make-auth-header token)]
       (let [zones (get-zones endpoint auth-header zone-names)]
         (if (empty? zones)
-          (println (if zone-name
+          (println (if zone-names
                      (str "No zones found with names: " zone-names)
                      "No zones found"))
           (doseq [zone zones]
@@ -97,7 +97,7 @@ Options:
     (let [auth-header (make-auth-header token)]
       (let [zones (get-zones endpoint auth-header zone-names)]
         (if (empty? zones)
-          (println (if zone-name
+          (println (if zone-names
                      (str "No zones found with names: " zone-names)
                      "No zones found"))
           (doseq [zone zones]
@@ -109,7 +109,7 @@ Options:
     (let [auth-header (make-auth-header token)]
       (let [zones (get-zones endpoint auth-header zone-names)]
         (if (empty? zones)
-          (println (if zone-name
+          (println (if zone-names
                      (str "No zones found with names: " zone-names)
                      "No zones found"))
           (doseq [zone zones]
