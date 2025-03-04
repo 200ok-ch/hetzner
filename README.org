@@ -57,9 +57,9 @@ The Hetzner DNS API token can be provided in three ways:
 
 ** Requirements
 
-* Babashka
-* bbin
-* Hetzner DNS API token
+- [[https://babashka.org/][Babashka]]
+- [[https://github.com/babashka/bbin][bbin]]
+- Hetzner DNS API token
 
 ** License
 
