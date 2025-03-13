@@ -88,7 +88,7 @@ Options:
                             {:headers (merge auth-header post-header)
                              :body (fs/file file-path)})]
     (if (#{200} (:status response))
-      (println "Successfully imported zone" zone-name "from" file-path)
+      (println "Successfully updated" zone-name "with" file-path)
       (println "Failed to import zone" zone-name ":" (:stderr response)))))
 
 (defn pull-command [{:keys [endpoint token] zone-names :zones :as opts}]
